@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Budget Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1 id="title">Monthly Budget Tracker</h1>
+
+<input id="name" placeholder="Name">
+<input id="income" placeholder="Monthly Income">
+
+<select id="monthSelect"></select>
+<button onclick="newMonth()">+ New Month</button>
+
+<select id="language" onchange="changeLang()">
+<option value="en">English</option>
+<option value="id">Indonesia</option>
+</select>
+
+<br><br>
+
+<a href="https://0517003000-cpu.github.io/50-30-20-Monthly-Budget-Calculator/" target="_blank">
+Budget Calculator
+</a>
+
+<div class="tables">
+
+<table class="budget-table">
+<tr class="title"><th colspan="3" id="t1">Essential Expenses</th></tr>
+<tr><td id="ai1">Available Income</td><td colspan="2" contenteditable id="budgetEssential"></td></tr>
+<tr><th id="e1">Expense</th><th id="c1">Cost</th><th id="n1">Notes</th></tr>
+<tbody id="essential"></tbody>
+<tr><td id="tot1">Total</td><td colspan="2" id="totalEssential">0</td></tr>
+<tr><td id="st1">Status</td><td colspan="2" id="statusEssential">-</td></tr>
+</table>
+
+<table class="budget-table">
+<tr class="title"><th colspan="3" id="t2">Non Essential Expenses</th></tr>
+<tr><td id="ai2">Available Income</td><td colspan="2" contenteditable id="budgetNon"></td></tr>
+<tr><th id="e2">Expense</th><th id="c2">Cost</th><th id="n2">Notes</th></tr>
+<tbody id="non"></tbody>
+<tr><td id="tot2">Total</td><td colspan="2" id="totalNon">0</td></tr>
+<tr><td id="st2">Status</td><td colspan="2" id="statusNon">-</td></tr>
+</table>
+
+<table class="budget-table">
+<tr class="title"><th colspan="3" id="t3">Savings</th></tr>
+<tr><td id="ai3">Available Income</td><td colspan="2" contenteditable id="budgetSavings"></td></tr>
+<tr><th id="s1">Type</th><th id="a1">Amount</th><th id="n3">Notes</th></tr>
+<tbody id="savings"></tbody>
+<tr><td id="tot3">Total</td><td colspan="2" id="totalSavings">0</td></tr>
+<tr><td id="rec">Recommendation</td><td colspan="2" id="statusSavings">-</td></tr>
+</table>
+
+</div>
+
+<div class="advice">
+<h2 id="adviceTitle">Budget Advice</h2>
+<div id="adviceText"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
